@@ -10,9 +10,6 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.hasError) {
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
       return this.props.fallback;
     }
     return this.props.children;
